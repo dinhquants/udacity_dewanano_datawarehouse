@@ -43,8 +43,8 @@ staging_songs_table_create = ("""
     CREATE TABLE IF NOT EXISTS staging_songs (
         num_songs INT,
         artist_id VARCHAR,
-        artist_latitude NUMERIC,
-        artist_longitude NUMERIC,
+        artist_latitude DECIMAL,
+        artist_longitude DECIMAL,
         artist_location VARCHAR,
         artist_name VARCHAR,
         song_id VARCHAR,
@@ -91,8 +91,8 @@ artist_table_create = ("""
         artist_id VARCHAR NOT NULL PRIMARY KEY sortkey,
         name VARCHAR NOT NULL,
         location VARCHAR,
-        latitude NUMERIC,
-        longitude NUMERIC)
+        latitude DECIMAL,
+        longitude DECIMAL)
 """)
 
 time_table_create = ("""
